@@ -1,8 +1,8 @@
 # AI-bibliotek
 
 ## Innhold: 
-- Om, denne filen.
-- [Brukerstøtte](Brukerstotte.md)
+- Read me, denne filen.
+- [Brukerstøtte, tips og triks](Brukerstotte.md)
 
 ## Viktig: 
 - Skriv gjerne på norsk
