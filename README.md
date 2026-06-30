@@ -1,6 +1,12 @@
 # AI-bibliotek
 
-Obs: Hvordan skal vi organisere mapper?
+## Viktig: 
+- Diskusjoner => [Vi kjører forslag, innspill, diskusjoner, etc. her](https://github.com/UiT-ITA/AI-bibliotek/discussions)
+- Funnet feil eller forbedringer i tektene => [Da kan du bruke "issues"](https://github.com/UiT-ITA/AI-bibliotek/issues)
+- Bidra? Skriv i vei og gjør en "pull request (pr)"
+
+## TODO: 
+- Hvordan skal vi organisere mapper?
 
 ## Tekster er ment for å kunne: 
 - limes inn som instruksjoner til Github Copilot, Claude, med mer.  
