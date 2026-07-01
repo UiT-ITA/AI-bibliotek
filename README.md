@@ -2,7 +2,9 @@
 
 ## Innhold: 
 - Read me, denne filen.
-- [Brukerstøtte, tips og triks](Brukerstotte.md)
+- Innhold:
+  - [Skills](skills/index.md)
+  - [Brukerstøtte, tips og triks](Brukerstotte.md)
 
 ## Viktig: 
 - Skriv gjerne på norsk
