@@ -1,6 +1,6 @@
 ---
-name: dotnetdocs-bootstrap
-description: "Bootstrap and standardize a .NET 10 Blazor + Aspire solution based on DotNetDocs chat history. Assumes solution file already exists. Prompts for app name, Entra TenantId, and Entra ClientId before implementation, and enforces established UI/auth design across key files."
+name: UiTBlazorTemplate-bootstrap
+description: "Bootstrap and standardize a .NET 10 Blazor + Aspire solution based on UiTBlazorTemplate chat history. Assumes solution file already exists. Prompts for app name, Entra TenantId, and Entra ClientId before implementation, and enforces established UI/auth design across key files."
 prerequsites: Empty solution created. 
 license: MIT
 metadata:
@@ -12,10 +12,10 @@ metadata:
     - chatlogs/ChatLog24.md
 ---
 
-# DotNetDocs Bootstrap Skill
+# UiTBlazorTemplate Bootstrap Skill
 
 ## Purpose
-Apply the established implementation and design pattern from previous DotNetDocs chats to a fresh repo state.
+Apply the established implementation and design pattern from previous UiTBlazorTemplate chats to a fresh repo state.
 
 ## Assumption
 - The user has already created the solution file (`.slnx`/`.sln`).
@@ -61,7 +61,7 @@ Do not proceed until these are answered.
 - Class name: `AppUiService`.
 - Lifetime: singleton.
 - Must expose:
-  - `AppTitle` defaulting to `"DotNet Docs"`.
+  - `AppTitle` defaulting to `"UiT Blazor Template"`.
   - `MudTheme MyTheme` with both `PaletteLight` and `PaletteDark` configured.
 - Theme values can use placeholder UiT colors, but include both app bar and drawer colors.
 - `AppTitle` and theme belong here, not in `PersonalUiService`.
