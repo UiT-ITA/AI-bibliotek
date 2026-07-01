@@ -4,7 +4,7 @@
 - Read me, denne filen.
 - Innhold:
   - [Skills](skills/index.md)
-  - [Brukerstøtte, tips og triks](Brukerstotte.md)
+  - [Brukerstøtte, tips og triks](support/index.md)
 
 ## Viktig: 
 - Skriv gjerne på norsk
