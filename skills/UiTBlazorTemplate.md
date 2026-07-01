@@ -5,7 +5,7 @@ prerequsites: Empty solution created.
 license: MIT
 metadata:
   author: GitHub Copilot
-  version: "1.1.0"
+  version: "1.2.0"
   sourceChats:
     - chatlogs/chat-2026-07-01.md
     - chatlogs/ChatLog5.md
@@ -40,17 +40,20 @@ Do not proceed until these are answered.
    - `MudBlazor`
    - `Microsoft.Identity.Web`
 4. Implement UI/auth design conventions in the exact files listed below.
-5. Configure authentication/authorization in `Program.cs`:
+5. Remove generated Bootstrap static assets and references:
+   - Delete `wwwroot/lib/bootstrap`
+   - Ensure there are no source references to Bootstrap CSS/JS
+6. Configure authentication/authorization in `Program.cs`:
    - `AddAuthentication().AddMicrosoftIdentityWebApp(...)`
    - `AddAuthorization` with fallback policy
    - `UseAuthentication`, `UseAuthorization`
    - `MapGroup("/authentication").MapLoginAndLogout()`
    - Require auth for app routes (`MapRazorComponents<App>().RequireAuthorization()`)
-6. Configure app settings:
+7. Configure app settings:
    - Set `AzureAd:Instance`, `AzureAd:TenantId`, `AzureAd:ClientId`, `CallbackPath`
    - Keep production placeholders in `appsettings.json`
    - Set real values in `appsettings.Development.json`
-7. Add tests project with TUnit when requested:
+8. Add tests project with TUnit when requested:
    - Target `net10.0`
    - Enable Microsoft Testing Platform support via `global.json` test runner
    - Add at least service-level tests for UI state services
@@ -80,6 +83,8 @@ Do not proceed until these are answered.
 - Include MudBlazor CSS and JS assets.
 - Keep Google Roboto font link.
 - Keep UiT external favicon links block.
+- Do not include Bootstrap CSS/JS references.
+- Do not use a local `favicon.ico` Remove if present in wwwroot folder.
 - Use interactive server render mode:
   - `<HeadOutlet @rendermode="@InteractiveServer" />`
   - `<Routes @rendermode="@InteractiveServer" />`
@@ -89,6 +94,7 @@ Do not proceed until these are answered.
 - AppBar should include:
   - menu button bound to drawer toggle
   - logo image `Src="/images/uit_en.png"`
+  - logo alt/class should match: `<MudImage Alt="The artic University of Norway" Src="/images/uit_en.png" Class="ml-2 mr-8"/>`
   - app title from `AppUiService.AppTitle`
   - `LoginDisplay` and `ToggleDarkLightMode`
 - Drawer behavior:
@@ -111,6 +117,9 @@ Do not proceed until these are answered.
 - Use `AuthorizeView` with login/logout behavior:
   - unauthenticated -> navigate to `authentication/login`
   - authenticated -> POST form to `authentication/logout` + antiforgery token + return URL
+- Remove dedicated logout button.
+- Username (UPN/display name) should submit logout when clicked.
+- On username click, ask for confirmation with exact text: `Confirm logout?` (yes/no alternatives).
 - Populate `personalUi.UserPrincipalName` from `ClaimTypes.Upn` fallback to identity name.
 - Keep styled wrappers (`auth_div`, `login_div`, `logout_div`) and button/form classes from prior design.
 
@@ -148,5 +157,7 @@ After adding projects and NuGet packages:
 
 ## Notes from prior chats
 - Keep logo path as `/images/uit_en.png` and ensure image copy rules are set.
-- Use UiT favicon links in `App.razor` (external URLs).
+- Use UiT favicon links in `App.razor` (external URLs), and do not keep `favicon.ico`.
+- Remove `wwwroot/lib/bootstrap` and any source references to Bootstrap assets.
+- Prefer `ILogger<T>`-based logging with focus on warnings/exceptions and only important information logs.
 - For .NET 10 + TUnit, configure Microsoft Testing Platform runner in `global.json`.
