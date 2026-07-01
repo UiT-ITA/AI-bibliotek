@@ -1,11 +1,7 @@
 ---
-name: UiT Blazor template
-description: Web app, aspire og tester, blazor, dotnet 10, c#, UiT template
-prerequsites: Lag en tom solution. 
-questions: Navnet på appen, tenantId, clientId
----
 name: dotnetdocs-bootstrap
 description: "Bootstrap and standardize a .NET 10 Blazor + Aspire solution based on DotNetDocs chat history. Assumes solution file already exists. Prompts for app name, Entra TenantId, and Entra ClientId before implementation, and enforces established UI/auth design across key files."
+prerequsites: Empty solution created. 
 license: MIT
 metadata:
   author: GitHub Copilot
