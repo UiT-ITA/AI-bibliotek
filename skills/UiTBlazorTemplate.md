@@ -31,7 +31,6 @@ Do not proceed until these are answered.
 - `src/<AppName>.AppHost` (Aspire AppHost)
 - `src/<AppName>.ServiceDefaults` (service defaults / telemetry)
 - `src/<AppName>` (Blazor .NET 10 app)
-- Optional: `tests/<AppName>.Tests` with TUnit
 
 ## Implementation workflow
 1. Validate solution/projects exist and are included in the solution file.
@@ -53,10 +52,6 @@ Do not proceed until these are answered.
    - Set `AzureAd:Instance`, `AzureAd:TenantId`, `AzureAd:ClientId`, `CallbackPath`
    - Keep production placeholders in `appsettings.json`
    - Set real values in `appsettings.Development.json`
-8. Add tests project with TUnit when requested:
-   - Target `net10.0`
-   - Enable Microsoft Testing Platform support via `global.json` test runner
-   - Add at least service-level tests for UI state services
 
 ## Design specifications from prior chats (must preserve)
 
@@ -167,4 +162,4 @@ After adding projects and NuGet packages:
 - Use UiT favicon links in `App.razor` (external URLs), and do not keep `favicon.ico`.
 - Remove `wwwroot/lib/bootstrap` and any source references to Bootstrap assets.
 - Prefer `ILogger<T>`-based logging with focus on warnings/exceptions and only important information logs.
-- For .NET 10 + TUnit, configure Microsoft Testing Platform runner in `global.json`.
+
