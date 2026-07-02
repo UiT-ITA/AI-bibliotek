@@ -88,6 +88,13 @@ Do not proceed until these are answered.
 - Use interactive server render mode:
   - `<HeadOutlet @rendermode="@InteractiveServer" />`
   - `<Routes @rendermode="@InteractiveServer" />`
+- Add UiT favicons by adding this to the <head> section
+  - `<!-- Favicons -->`
+  - `<link rel="apple-touch-icon" href="https://uit.no/ressurs/uit/2020web/favicons/apple-touch-icon.png" sizes="180x180">`
+  - `<link rel="icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon-32x32.png" type="image/png" sizes="32x32">`
+  - `<link rel="icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon-16x16.png" type="image/png" sizes="16x16">`
+  - `<link rel="mask-icon" href="https://uit.no/ressurs/uit/2020web/favicons/safari-pinned-tab.svg" color="#000000">`
+  - `<link rel="shortcut icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon.ico">`
 
 ### `Components/Layout/MainLayout.razor`
 - Use MudBlazor layout primitives (`MudLayout`, `MudAppBar`, `MudDrawer`, `MudMainContent`).
