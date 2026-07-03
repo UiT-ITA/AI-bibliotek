@@ -3,7 +3,7 @@
 ## Innhold: 
 - Read me, denne filen.
 - Innhold:
-  - [Skills](skills/
+  - [Skills](skills/)
   - [Brukerstøtte, tips og triks](support/)
 
 ## Viktig: 
