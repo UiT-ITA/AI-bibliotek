@@ -2,10 +2,9 @@
 name: UiTBlazorTemplate-Core
 description: "Bootstrap and standardize a .NET 10 Blazor solution."
 license: MIT
-metadata:
-  author: Raymond Andreassen
-  version: "1.3.0"
-  sourceChats:
+author: Raymond Andreassen
+version: "1.3.0"
+sourceChats:
 ---
 
 - Important: DO NOT DEBUG AND CORRECT ERRORS, I AM DEBUGGING THIS SKILL AND WANT CORRECT MISTAKES
