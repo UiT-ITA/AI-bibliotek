@@ -32,7 +32,7 @@ Before making any code/config changes, collect these values from the user:
 4. `clientId`
 5. `solutionFileName`, default is applicationName with .slx file extension
 6. `Solution folder`, will be path to solution + solutionFileName, do not include .slx in path
-7. `Initialize git`, yes/no, use `git init` is yes. 
+7. `Initialize git`, yes/no, use `git init` if yes. 
 
 Rules:
 - Do not assume or invent defaults.
