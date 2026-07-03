@@ -102,6 +102,7 @@ Rules:
 - Protect pages/endpoints with `[Authorize]`.
 - Use policies and roles for authorization, not ad hoc checks.
 - Prefer claims-based checks when role checks are too coarse.
+- Add: using Microsoft.Identity.Web.UI, in program.cs
 
 ## OpenTelemetry
 - Configure OpenTelemetry in `Program.cs`.
@@ -131,6 +132,7 @@ builder.Services.AddOpenTelemetry()
     });
 #endregion
 ```
+- Add: using OpenTelemetry.Resources;
 
 ## Components guidance
 - Scoped class for user information and UI, classname UIUser
