@@ -4,7 +4,7 @@ description: "Bootstrap and standardize a .NET 10 Blazor solution."
 license: MIT
 metadata:
   author: Raymond Andreassen
-  version: "1.2.0"
+  version: "1.3.0"
   sourceChats:
 ---
 
@@ -27,10 +27,12 @@ Do not proceed past planning until all required inputs are provided.
 Before making any code/config changes, collect these values from the user:
 
 1. `applicationName`
-2. `tenantId`
-3. `clientId`
-4. `solutionFileName`, default is applicationName with .slx file extension
-5. `applicationVersion`, default '1.0.0'
+2. `applicationVersion`, default '1.0.0'
+3. `tenantId`
+4. `clientId`
+5. `solutionFileName`, default is applicationName with .slx file extension
+6. `Solution folder`, will be path to solution + solutionFileName, do not include .slx in path
+7. `Initialize git`, yes/no, use `git init` is yes. 
 
 Rules:
 - Do not assume or invent defaults.
@@ -52,6 +54,7 @@ Rules:
 - Use .NET 10+ and SDK-style .csproj  files
 - Use OpenTelemetry for tracing, metrics, and logs where supported.
 - Use Microsoft Entra ID for authentication and authorization.
+- Use Aspire, add it to the solution, add project to aspire. 
 
 ## Scope
 - Use MudBlazor for all Blazor UI unless there is a strong reason not to.
