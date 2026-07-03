@@ -173,6 +173,10 @@ builder.Services.AddOpenTelemetry()
 - Scoped class for user information and UI, classname UIUser, object name: uiUser
 - Singleton class for application UI, classname UIApp, object name: uiApp
 
+## Aftermath
+- App.razor, if `<BasePath />`, change it to `<base href="/" />`
+- _Imports.razor, check if `@using MudBlazor` is present
+
 ## Code quality
 - Prefer DI over static helpers.
 - Prefer async APIs.
