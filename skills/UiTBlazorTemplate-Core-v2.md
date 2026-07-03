@@ -97,6 +97,41 @@ Rules:
   - `LogError` for failures
 - Never swallow exceptions silently.
 
+## Page design
+- Do not change any razor files, design will be added later. Except: 
+  - App.razor
+    - Remove all refrences to bootstrap. 
+    - Delete wwwroot/lib/bootstrap folder
+    - Replace: `<link rel="icon" type="image/png" href="favicon.png" />` with 
+      ```
+      <!-- UiT Favicons -->
+      <link rel="apple-touch-icon" href="https://uit.no/ressurs/uit/2020web/favicons/apple-touch-icon.png" sizes="180x180">
+      <link rel="icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+      <link rel="icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon-16x16.png" type="image/png" sizes="16x16">
+      <link rel="mask-icon" href="https://uit.no/ressurs/uit/2020web/favicons/safari-pinned-tab.svg" color="#000000">
+      <link rel="shortcut icon" href="https://uit.no/ressurs/uit/2020web/favicons/favicon.ico">
+      ```
+    - Add
+      ```
+      <!-- MudBlazor -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+      <link href="@Assets["_content/MudBlazor/MudBlazor.min.css"]" rel="stylesheet" />
+      ```
+    - Add next to the default Blazor script at the end: 
+      ` <script src="@Assets["_content/MudBlazor/MudBlazor.min.js"]"></script>`
+  - Delete the site.css file and favicon.ico file. 
+  - Entire content of MainLayout.razor
+    ```
+      @inherits LayoutComponentBase
+      
+      <MudThemeProvider />
+      <MudPopoverProvider />
+      <MudDialogProvider />
+      <MudSnackbarProvider />
+      
+      @Body    
+    ```
+    
 ## Authentication and authorization
 - Use Entra ID authentication via ASP.NET Core authentication middleware.
 - Protect pages/endpoints with `[Authorize]`.
@@ -132,14 +167,11 @@ builder.Services.AddOpenTelemetry()
     });
 #endregion
 ```
-- Add: using OpenTelemetry.Resources;
+- Add, so the compiler doesn't complain: using OpenTelemetry.Resources;
 
 ## Components guidance
-- Scoped class for user information and UI, classname UIUser
-- Singleton class for application UI, classname UIApp
-
-
-
+- Scoped class for user information and UI, classname UIUser, object name: uiUser
+- Singleton class for application UI, classname UIApp, object name: uiApp
 
 ## Code quality
 • Prefer DI over static helpers.
