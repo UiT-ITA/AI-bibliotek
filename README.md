@@ -3,8 +3,8 @@
 ## Innhold: 
 - Read me, denne filen.
 - Innhold:
-  - [Skills](skills/index.md)
-  - [Brukerstøtte, tips og triks](support/index.md)
+  - [Skills](skills/
+  - [Brukerstøtte, tips og triks](support/)
 
 ## Viktig: 
 - Skriv gjerne på norsk
