@@ -10,7 +10,8 @@ sourceChats:
 - Important: DO NOT DEBUG AND CORRECT ERRORS, I AM DEBUGGING THIS SKILL AND WANT CORRECT MISTAKES
 - Enable nullable reference types and treat warnings seriously.
 - Add  .editorconfig  for consistent formatting and naming.
-- Use analyzers ( StyleCop ,  Microsoft.CodeAnalysis.NetAnalyzers ) and consider warnings as errors.
+- Use analyzers ( StyleCop ,  Microsoft.CodeAnalysis.NetAnalyzers ).
+- Do not use #region/#endregion, 
 - Keep project structure simple: separate  src/  and  tests/ , one project per concern.
 - Use xUnit for tests, and run them from Test Explorer.
 - Prefer async/await for I/O-bound work.
