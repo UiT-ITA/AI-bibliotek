@@ -1,10 +1,10 @@
 ---
 name: UiTBlazorTemplate-bootstrap
-description: "Bootstrap and standardize a .NET 10 Blazor + Aspire solution based on UiTBlazorTemplate chat history. Assumes solution file already exists. Prompts for app name, Entra TenantId, and Entra ClientId before implementation, and enforces established UI/auth design across key files."
+description: "Bootstrap and standardize a .NET 10 Blazor + Aspire solution."
 prerequsites: Empty solution created. 
 license: MIT
 metadata:
-  author: GitHub Copilot
+  author: Raymond Andreassen
   version: "1.2.0"
   sourceChats:
     - chatlogs/chat-2026-07-01.md
