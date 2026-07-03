@@ -174,10 +174,10 @@ builder.Services.AddOpenTelemetry()
 - Singleton class for application UI, classname UIApp, object name: uiApp
 
 ## Code quality
-• Prefer DI over static helpers.
-• Prefer async APIs.
-• Keep components small and focused.
-• Reuse existing patterns in the repo before introducing new abstractions.
+- Prefer DI over static helpers.
+- Prefer async APIs.
+- Keep components small and focused.
+- Reuse existing patterns in the repo before introducing new abstractions.
 
 
 
