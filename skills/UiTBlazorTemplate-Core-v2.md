@@ -9,7 +9,10 @@ sourceChats:
 
 - Important: DO NOT DEBUG AND CORRECT ERRORS, I AM DEBUGGING THIS SKILL AND WANT CORRECT MISTAKES
 - Enable nullable reference types and treat warnings seriously.
-- Add  .editorconfig  for consistent formatting and naming.
+- Add  .editorconfig  for consistent formatting and naming. TreatWarningsAsErrors sets to false.
+- Set in .editorconfig
+  - dotnet_diagnostic.SA1124.severity = none
+  - dotnet_diagnostic.SA1516.severity = none
 - Use analyzers ( StyleCop ,  Microsoft.CodeAnalysis.NetAnalyzers ).
 - Do not use #region/#endregion, 
 - Keep project structure simple: separate  src/  and  tests/ , one project per concern.
