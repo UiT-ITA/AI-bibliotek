@@ -7,22 +7,6 @@ version: "1.3.0"
 sourceChats:
 ---
 
-- Enable nullable reference types and treat warnings seriously.
-- Add  .editorconfig  for consistent formatting and naming. TreatWarningsAsErrors sets to false.
-- Set in .editorconfig
-  - dotnet_diagnostic.SA1124.severity = none
-  - dotnet_diagnostic.SA1516.severity = none
-- Use analyzers ( StyleCop ,  Microsoft.CodeAnalysis.NetAnalyzers ).
-- Do not use #region/#endregion, 
-- Keep project structure simple: separate  src/  and  tests/ , one project per concern.
-- Use xUnit for tests, and run them from Test Explorer.
-- Prefer async/await for I/O-bound work.
-- Use dependency injection and avoid hard-coded dependencies.
-- Manage packages with NuGet and pin versions where possible.
-- Use Git integration in Visual Studio, with small commits and pull requests.
-- Use nuget to get nuget packages, always latest version, no prerelease, upgrade if newer version exist. 
-
-
 # UiT MudBlazor guidance
 ## Required inputs (ask first)
 Do not proceed past planning until all required inputs are provided.
@@ -36,7 +20,7 @@ Before making any code/config changes, collect these values from the user:
 6. `Solution folder`, will be path to solution + solutionFileName, do not include .slx in path
 7. `Initialize git`, yes/no, use `git init` if yes. 
 
-Rules:
+## Rules:
 - Do not assume or invent defaults.
 - If one or more values are missing, ask only for the missing values.
 - Wait for the user’s response before continuing.
@@ -57,6 +41,20 @@ Rules:
 - Prefer async APIs.
 - Keep components small and focused.
 - Reuse existing patterns in the repo before introducing new abstractions.
+- Enable nullable reference types and treat warnings seriously.
+- Add  .editorconfig  for consistent formatting and naming. TreatWarningsAsErrors sets to false.
+- Set in .editorconfig
+  - dotnet_diagnostic.SA1124.severity = none
+  - dotnet_diagnostic.SA1516.severity = none
+- Use analyzers ( StyleCop ,  Microsoft.CodeAnalysis.NetAnalyzers ).
+- Do not use #region/#endregion, 
+- Keep project structure simple: separate  src/  and  tests/ , one project per concern.
+- Use xUnit for tests, and run them from Test Explorer.
+- Prefer async/await for I/O-bound work.
+- Use dependency injection and avoid hard-coded dependencies.
+- Manage packages with NuGet and pin versions where possible.
+- Use Git integration in Visual Studio, with small commits and pull requests.
+- Use nuget to get nuget packages, always latest version, no prerelease, upgrade if newer version exist. 
 
 ## Stack
 - Use .NET 10+ and SDK-style .csproj  files
