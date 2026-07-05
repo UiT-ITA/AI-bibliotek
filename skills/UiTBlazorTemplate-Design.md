@@ -83,7 +83,7 @@ sourceChats:
 - Scoped class for user information and UI, classname UIUser
 - Singleton class for application UI, classname UIApp
 
-## Remove examples
+## Remove files
 - Remove Weather.razor
 - Remove Counter.razor
 - Remove wwwroot\favicon.ico
