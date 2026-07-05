@@ -7,7 +7,6 @@ version: "1.3.0"
 sourceChats:
 ---
 
-- Important: DO NOT DEBUG AND CORRECT ERRORS, I AM DEBUGGING THIS SKILL AND WANT CORRECT MISTAKES
 - Enable nullable reference types and treat warnings seriously.
 - Add  .editorconfig  for consistent formatting and naming. TreatWarningsAsErrors sets to false.
 - Set in .editorconfig
@@ -52,6 +51,12 @@ Rules:
 - EF Core: migrations, DbContext patterns, query conventions.
 - Azure: App Service, Functions, Azure Monitor App Insights, deployment.
 - Testing: xUnit/NUnit, mocking, integration tests.
+
+## Code quality
+- Prefer DI over static helpers.
+- Prefer async APIs.
+- Keep components small and focused.
+- Reuse existing patterns in the repo before introducing new abstractions.
 
 ## Stack
 - Use .NET 10+ and SDK-style .csproj  files
@@ -177,11 +182,6 @@ builder.Services.AddOpenTelemetry()
 - App.razor, if `<BasePath />`, change it to `<base href="/" />`
 - _Imports.razor, check if `@using MudBlazor` is present
 
-## Code quality
-- Prefer DI over static helpers.
-- Prefer async APIs.
-- Keep components small and focused.
-- Reuse existing patterns in the repo before introducing new abstractions.
 
 
 
